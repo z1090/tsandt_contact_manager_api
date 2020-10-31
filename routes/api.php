@@ -40,6 +40,7 @@ Route::prefix('contacts')->middleware('auth:sanctum')->group(function () {
     // Single Contact
     Route::post('', [ContactsController::class, 'store']);
     Route::get('{contact}', [ContactsController::class, 'show']);
+    Route::put('{contact}', [ContactsController::class, 'update']);
 
     // Multiple
     Route::get('', [ContactsController::class, 'index']);

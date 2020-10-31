@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Http\Requests\ContactUpdateRequest;
 use App\Http\Resources\ContactResource;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -51,9 +52,12 @@ class ContactsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ContactUpdateRequest $request, Contact $contact)
     {
-        //
+        $data = $request->only(["first_name", "last_name", "email", "phone", "company_id"]);
+        $contact->fill($data)->save();
+
+        return new ContactResource($contact);
     }
 
     /**
