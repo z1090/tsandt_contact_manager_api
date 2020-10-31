@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\ContactsAtCompanyController;
+use App\Http\Controllers\ContactsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +33,11 @@ Route::prefix('companies/{company}')->middleware('auth:sanctum')->group(function
     Route::get('', [ContactsAtCompanyController::class, 'index']);
     Route::post('contact', [ContactsAtCompanyController::class, 'store']);
     Route::post('contacts', [ContactsAtCompanyController::class, 'storeMany']);
+});
+
+// Contacts routes
+Route::prefix('contacts')->middleware('auth:sanctum')->group(function () {
+    Route::get('', [ContactsController::class, 'index']);
+    Route::post('', [ContactsController::class, 'store']);
+    Route::post('/many', [ContactsAtCompanyController::class, 'storeMany']);
 });
