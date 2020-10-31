@@ -18,361 +18,361 @@ class NotesSeeder extends Seeder
         $notes = [
             [
                 'contact_id' => 11,
-                'note' => 'Triple-buffered even-keeled flexibility',
+                'note_text' => 'Triple-buffered even-keeled flexibility',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 18,
-                'note' => 'Compatible optimizing implementation',
+                'note_text' => 'Compatible optimizing implementation',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 7,
-                'note' => 'Reactive logistical implementation',
+                'note_text' => 'Reactive logistical implementation',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 20,
-                'note' => 'Team-oriented zero tolerance matrix',
+                'note_text' => 'Team-oriented zero tolerance matrix',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 9,
-                'note' => 'Stand-alone hybrid info-mediaries',
+                'note_text' => 'Stand-alone hybrid info-mediaries',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 14,
-                'note' => 'Operative executive complexity',
+                'note_text' => 'Operative executive complexity',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 1,
-                'note' => 'Robust reciprocal success',
+                'note_text' => 'Robust reciprocal success',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 17,
-                'note' => 'Profit-focused exuding data-warehouse',
+                'note_text' => 'Profit-focused exuding data-warehouse',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 20,
-                'note' => 'Reactive regional paradigm',
+                'note_text' => 'Reactive regional paradigm',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 16,
-                'note' => 'Upgradable zero tolerance function',
+                'note_text' => 'Upgradable zero tolerance function',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 20,
-                'note' => 'Digitized motivating access',
+                'note_text' => 'Digitized motivating access',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 9,
-                'note' => 'Persevering user-facing framework',
+                'note_text' => 'Persevering user-facing framework',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 15,
-                'note' => 'Self-enabling disintermediate ability',
+                'note_text' => 'Self-enabling disintermediate ability',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 7,
-                'note' => 'Decentralized intangible open architecture',
+                'note_text' => 'Decentralized intangible open architecture',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 11,
-                'note' => 'Decentralized systemic groupware',
+                'note_text' => 'Decentralized systemic groupware',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 16,
-                'note' => 'Switchable national local area network',
+                'note_text' => 'Switchable national local area network',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 5,
-                'note' => 'Optional regional info-mediaries',
+                'note_text' => 'Optional regional info-mediaries',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 12,
-                'note' => 'Extended intangible local area network',
+                'note_text' => 'Extended intangible local area network',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 16,
-                'note' => 'User-centric secondary circuit',
+                'note_text' => 'User-centric secondary circuit',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 2,
-                'note' => 'Multi-channelled demand-driven forecast',
+                'note_text' => 'Multi-channelled demand-driven forecast',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 17,
-                'note' => 'Multi-lateral demand-driven knowledge base',
+                'note_text' => 'Multi-lateral demand-driven knowledge base',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 14,
-                'note' => 'Reduced explicit conglomeration',
+                'note_text' => 'Reduced explicit conglomeration',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 2,
-                'note' => 'User-centric zero tolerance ability',
+                'note_text' => 'User-centric zero tolerance ability',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 19,
-                'note' => 'Progressive optimizing moderator',
+                'note_text' => 'Progressive optimizing moderator',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 17,
-                'note' => 'Ergonomic systematic customer loyalty',
+                'note_text' => 'Ergonomic systematic customer loyalty',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 8,
-                'note' => 'Grass-roots systematic emulation',
+                'note_text' => 'Grass-roots systematic emulation',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 2,
-                'note' => 'Profound directional circuit',
+                'note_text' => 'Profound directional circuit',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 6,
-                'note' => 'Digitized fault-tolerant system engine',
+                'note_text' => 'Digitized fault-tolerant system engine',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 6,
-                'note' => 'Organized modular infrastructure',
+                'note_text' => 'Organized modular infrastructure',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 14,
-                'note' => 'Managed real-time software',
+                'note_text' => 'Managed real-time software',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 6,
-                'note' => 'Function-based analyzing process improvement',
+                'note_text' => 'Function-based analyzing process improvement',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 7,
-                'note' => 'Cross-group directional array',
+                'note_text' => 'Cross-group directional array',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 9,
-                'note' => 'Multi-tiered maximized knowledge user',
+                'note_text' => 'Multi-tiered maximized knowledge user',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 18,
-                'note' => 'Synergized tangible algorithm',
+                'note_text' => 'Synergized tangible algorithm',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 10,
-                'note' => 'Ergonomic intangible system engine',
+                'note_text' => 'Ergonomic intangible system engine',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 2,
-                'note' => 'Sharable uniform groupware',
+                'note_text' => 'Sharable uniform groupware',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 4,
-                'note' => 'Synchronised coherent utilisation',
+                'note_text' => 'Synchronised coherent utilisation',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 3,
-                'note' => 'Multi-lateral multi-state intranet',
+                'note_text' => 'Multi-lateral multi-state intranet',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 5,
-                'note' => 'Open-architected exuding encoding',
+                'note_text' => 'Open-architected exuding encoding',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 15,
-                'note' => 'Future-proofed empowering info-mediaries',
+                'note_text' => 'Future-proofed empowering info-mediaries',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 8,
-                'note' => 'Distributed fresh-thinking encoding',
+                'note_text' => 'Distributed fresh-thinking encoding',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 7,
-                'note' => 'Networked coherent matrix',
+                'note_text' => 'Networked coherent matrix',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 15,
-                'note' => 'Fully-configurable scalable portal',
+                'note_text' => 'Fully-configurable scalable portal',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 11,
-                'note' => 'Assimilated high-level capability',
+                'note_text' => 'Assimilated high-level capability',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 15,
-                'note' => 'Mandatory tertiary success',
+                'note_text' => 'Mandatory tertiary success',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 19,
-                'note' => 'Implemented non-volatile Graphic Interface',
+                'note_text' => 'Implemented non-volatile Graphic Interface',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 8,
-                'note' => 'Grass-roots heuristic standardization',
+                'note_text' => 'Grass-roots heuristic standardization',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 14,
-                'note' => 'Universal attitude-oriented alliance',
+                'note_text' => 'Universal attitude-oriented alliance',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 13,
-                'note' => 'Public-key zero defect portal',
+                'note_text' => 'Public-key zero defect portal',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 13,
-                'note' => 'Universal multimedia archive',
+                'note_text' => 'Universal multimedia archive',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 20,
-                'note' => 'Devolved background complexity',
+                'note_text' => 'Devolved background complexity',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 7,
-                'note' => 'Synergistic local attitude',
+                'note_text' => 'Synergistic local attitude',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 8,
-                'note' => 'Reactive needs-based data-warehouse',
+                'note_text' => 'Reactive needs-based data-warehouse',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 4,
-                'note' => 'Multi-layered national algorithm',
+                'note_text' => 'Multi-layered national algorithm',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 20,
-                'note' => 'Horizontal 3rd generation matrix',
+                'note_text' => 'Horizontal 3rd generation matrix',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 20,
-                'note' => 'Face to face bi-directional emulation',
+                'note_text' => 'Face to face bi-directional emulation',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 12,
-                'note' => 'Persistent asynchronous knowledge base',
+                'note_text' => 'Persistent asynchronous knowledge base',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 12,
-                'note' => 'De-engineered eco-centric neural-net',
+                'note_text' => 'De-engineered eco-centric neural-net',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 2,
-                'note' => 'Reverse-engineered mission-critical challenge',
+                'note_text' => 'Reverse-engineered mission-critical challenge',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'contact_id' => 19,
-                'note' => 'Extended methodical circuit',
+                'note_text' => 'Extended methodical circuit',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ]
