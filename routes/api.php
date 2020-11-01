@@ -30,7 +30,6 @@ Route::prefix('companies')->group(function () {
     Route::middleware('auth:sanctum')->get('{company}', [CompaniesController::class, 'show']);
 });
 
-
 // Contacts at a company routes
 Route::prefix('companies/{company}')->middleware('auth:sanctum')->group(function () {
     Route::get('contacts', [ContactsAtCompanyController::class, 'index']);
@@ -45,7 +44,7 @@ Route::prefix('contacts')->middleware('auth:sanctum')->group(function () {
     Route::get('{contact}', [ContactsController::class, 'show']);
     Route::put('{contact}', [ContactsController::class, 'update']);
 
-    // Multiple Contacts (Deals with pagination and search queries)
+    // Multiple Contacts (search and pagination)
     Route::get('', [ContactsController::class, 'index'])->name('contacts');
     Route::get('list/{perPage}', [ContactsController::class, 'paginate']);
 });
