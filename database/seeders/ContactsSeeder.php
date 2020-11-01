@@ -80,9 +80,9 @@ class ContactsSeeder extends Seeder
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
-                'first_name' => 'Jennie',
+                'first_name' => 'Kim',
                 'last_name' => 'Somerbell',
-                'email' => 'gsomerbell7@browsebug.co.uk',
+                'email' => 'ksomerbell7@browsebug.co.uk',
                 'phone' => '01225135649',
                 'company_id' => 2,
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
