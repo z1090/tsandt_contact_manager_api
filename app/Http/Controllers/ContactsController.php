@@ -46,29 +46,15 @@ class ContactsController extends Controller
     public function search(Request $request)
     {
         $searchTerm = $request->all()['search'];
-        $columns = [
-            'contacts.id as contact_id',
-            'first_name',
-            'last_name',
-            'email',
-            'phone',
-            'contacts.created_at as created_at',
-            'contacts.updated_at as updated_at',
-            'companies.id as company_id',
-            'company_name',
-            'company_address'
-        ];
-
-        $results = Contact::select($columns)
-            ->join('companies', 'companies.id', '=', 'contacts.company_id')
+        $results = Contact::with('company')
             ->where('first_name', 'LIKE', "%{$searchTerm}%")
             ->orWhere('last_name', 'LIKE', "%{$searchTerm}%")
-            ->orWhere('company_name', 'LIKE', "%{$searchTerm}%")
+            ->orWherehas('company', function($query) use ($searchTerm) {
+                $query->where('company_name', 'LIKE', "%{$searchTerm}%");
+            })
             ->get();
 
-        $content = json_encode(["data" => $results]);
-
-        return response($content)->header('Content-Type', 'application/json');
+        return ContactsListResource::collection($results);
     }
 
     /**
