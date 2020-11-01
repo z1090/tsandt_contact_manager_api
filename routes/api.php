@@ -3,6 +3,7 @@
 use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\ContactsAtCompanyController;
 use App\Http\Controllers\ContactsController;
+use App\Http\Controllers\NotesController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
 
 // Company Routes
 Route::prefix('companies')->group(function () {
@@ -45,4 +48,10 @@ Route::prefix('contacts')->middleware('auth:sanctum')->group(function () {
     // Multiple Contacts (Deals with pagination and search queries)
     Route::get('', [ContactsController::class, 'index'])->name('contacts');
     Route::get('list/{perPage}', [ContactsController::class, 'paginate']);
+});
+
+// Notes routes
+Route::prefix('contacts/{contact}')->middleware('auth:sanctum')->group(function () {
+    Route::post('note', [NotesController::class, 'store']);
+    Route::post('notes', [NotesController::class, 'storeMany']);
 });
