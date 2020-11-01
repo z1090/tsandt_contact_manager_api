@@ -22,7 +22,11 @@ class ContactsController extends Controller
         if($request->has('search')) {
             return $this->search($request);
         } else {
-            return response("Resource not found.\n To list all contacts, use the 'api/contacts/list/<number>?page=1' endpoint.\n Replace <number> with the number of contacts required per page.", 404);
+            return response(
+                "Resource not found.
+                To list all contacts, use the 'api/contacts/list/<number>?page=1' endpoint.
+                Replace <number> with the number of contacts required per page.",
+            404);
         }
     }
 
@@ -97,14 +101,18 @@ class ContactsController extends Controller
         return new ContactResource($contact);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    // Controller created using the '--api' flag.
+    // Unused methods left in, but commented out,
+    // in case they're required in a future update.
+
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function destroy($id)
+    // {
+    //     //
+    // }
 }
