@@ -3,6 +3,8 @@
 A Contact Manager API application, created with Laravel for Tshirt&Sons Remote Technical Challenge.
 Thanks for taking the time to review my work!
 
+There is a project board in the 'projects' tab on github, which I used to manage the development process.
+
 ## Project Setup
 
 The project is using [Sanctum](https://laravel.com/docs/8.x/sanctum) for authentication.
@@ -14,7 +16,7 @@ php artisan db:seed
 
 As well as seeding the Companies, Contacts and Notes tables with test data, this will also create **two test users** and generate an authentication token for each user.
 
-The tokens will be written to the console after the seeding has completed. Please make a note of these.
+The tokens will be written to the console after the seeding has completed. Please make a note of these, they should look like `1|d8AEhtrr5mCqvNoT7nYv5AMeIfANqChDYgcAn22U`
 
 Test User 1 has Read and Write abilities.
 
