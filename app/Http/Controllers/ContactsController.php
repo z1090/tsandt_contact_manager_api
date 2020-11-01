@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
 use App\Http\Requests\ContactUpdateRequest;
+use App\Http\Resources\ContactsListResource;
 use App\Http\Resources\ContactResource;
 use App\Models\Contact;
 use Illuminate\Http\Request;
@@ -13,11 +14,27 @@ class ContactsController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if($request->has('search')) {
+            return $this->search($request);
+        } else {
+            return response("Resource not found.\n To list all contacts, use the 'api/contacts/list/<number>?page=1' endpoint.\n Replace <number> with the number of contacts required per page.", 404);
+        }
+    }
+
+    /**
+     * Display a paginated listing of the resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function paginate($perPage)
+    {
+        return ContactsListResource::collection(Contact::paginate($perPage));
     }
 
     /**

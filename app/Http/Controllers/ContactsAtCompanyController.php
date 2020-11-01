@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactAtCompanyRequest;
 use App\Http\Requests\MultipleContactsAtCompanyRequest;
-use App\Http\Resources\ContactsAtCompanyListResource;
+use App\Http\Resources\ContactsListResource;
 use App\Http\Resources\ContactResource;
 use App\Models\Company;
 use App\Models\Contact;
@@ -19,7 +19,7 @@ class ContactsAtCompanyController extends Controller
      */
     public function index(Company $company)
     {
-        return ContactsAtCompanyListResource::collection($company->contacts);
+        return ContactsListResource::collection($company->contacts);
     }
 
     /**

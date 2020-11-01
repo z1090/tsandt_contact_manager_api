@@ -42,7 +42,8 @@ Route::prefix('contacts')->middleware('auth:sanctum')->group(function () {
     Route::get('{contact}', [ContactsController::class, 'show']);
     Route::put('{contact}', [ContactsController::class, 'update']);
 
-    // Multiple
-    Route::get('', [ContactsController::class, 'index']);
-    Route::post('/many', [ContactsAtCompanyController::class, 'storeMany']);
+    // Multiple Contacts (Deals with pagination and search queries)
+    Route::get('', [ContactsController::class, 'index'])->name('contacts');
+    Route::get('list/{perPage}', [ContactsController::class, 'paginate']);
+    // Route::post('/many', [ContactsAtCompanyController::class, 'storeMany']);
 });
