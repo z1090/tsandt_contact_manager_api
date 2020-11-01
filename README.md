@@ -13,19 +13,23 @@ php artisan db:seed
 ```
 
 As well as seeding the Companies, Contacts and Notes tables with test data, this will also create **two test users** and generate an authentication token for each user.
+
 The tokens will be written to the console after the seeding has completed. Please make a note of these.
 
 Test User 1 has Read and Write abilities.
+
 Test User 2 only has Read abilities.
 
 Not essential, but to receive nicer 403 responses (just the error message), please go to your `.env` file and change the `APP_DEBUG` setting to `false`.
 
 ### Postman
-There is a Postman Collection in the `postman` folder of the root of the project; please import this.
-There are three subfolders, each with the same 12 endpoints.
-Please right click and edit the two 'Test User' subfolders, select **'Authorization'** then pick **'Bearer Token'** from the dropdown, copy and paste the new tokens from the terminal into the field on the right.
+There is a Postman Collection in the `postman` folder of the `root` of the project; please import this.
 
-All Requests in 'Test User 1' should now work, all the GET requests in 'Test User 2', and only the 'Read all companies' request should work in the 'No Auth' subfolder.
+There are three subfolders, each with the same 12 endpoints.
+
+Please right click and edit the two **'Test User'** subfolders, select **'Authorization'** then pick **'Bearer Token'** from the dropdown, copy and paste the new tokens from the terminal into the field on the right.
+
+All Requests in **'Test User 1'** should now work, all the GET requests in **'Test User 2'**, and only the 'Read all companies' request should work in the **'No Auth'** subfolder.
 
 ---
 
@@ -40,7 +44,9 @@ Will return an array of all companies in the database. The list includes only th
 Note that no authorization is required for this route as the data isn't particularly sensitive (but mainly for demonstration purposes!).
 
 **Path Params required:** NONE.
+
 **Request Type:** `GET`
+
 **Route:** `/api/companies`
 
 
@@ -74,10 +80,12 @@ http://localhost:8000/api/companies
 ---
 
 ### 2. Read a single company
-Will return an object with information about a the single, specified company, including the company id, name and address.
+Will return an object with information about a single, specified company, including the company id, name and address.
 
-**Path Params required:** `company_id`(integer).
+**Path Params required:** `company_id`(integer)
+
 **Request Type:** `GET`
+
 **Route:** `/api/companies/<company_id>`
 
 
@@ -112,7 +120,9 @@ Will return an array of all the contacts associated with a specified company. Th
 - company_address
 
 **Path Params required:** `company_id`(integer)
+
 **Request Type:** `GET`
+
 **Route:** `/api/companies/<company_id>/contacts`
 
 #### Example Request:
@@ -154,9 +164,9 @@ http://localhost:8000/api/companies/1/contacts
 
 ### 4. Create a single contact at a given company
 Creates a single contact from a supplied JSON object. The following fields should be supplied:
-- **first_name:** [required, string, max: 50 characters],
-- **last_name:** [required, string, max: 50 characters],
-- **email:** [required, must be unique, must be a valid email address, max: 50 characters],
+- **first_name:** [required, string, max: 50 characters]
+- **last_name:** [required, string, max: 50 characters]
+- **email:** [required, must be unique, must be a valid email address, max: 50 characters]
 - **phone:** [required, string, max: 15 characters] (note that the phone number does not have to be unique)
 
 Returns a data object with the following information:
@@ -172,7 +182,9 @@ Returns a data object with the following information:
 
 
 **Path Params required:** `company_id`(integer)
+
 **Request Type:** `POST`
+
 **Route** `/api/companies/<company_id>/contact`
 
 
@@ -213,10 +225,10 @@ http://localhost:8000/api/companies/1/contact
 
 
 ### 5. Create multiple contacts at a given company
-Creates multiple contacts from a supplied JSON array named **`"contacts"`**. each entry in the array should be an object where the following fields should be supplied:
-- **first_name:** [required, string, max: 50 characters],
-- **last_name:** [required, string, max: 50 characters],
-- **email:** [required, must be unique, must be a valid email address, max: 50 characters],
+Creates multiple contacts from a supplied JSON array named **`"contacts"`**. Each entry in the array should be an object where the following fields should be supplied:
+- **first_name:** [required, string, max: 50 characters]
+- **last_name:** [required, string, max: 50 characters]
+- **email:** [required, must be unique, must be a valid email address, max: 50 characters]
 - **phone:** [required, string, max: 15 characters] (note that the phone number does not have to be unique)
 
 Returns a data array where each entry is an object containing the following information:
@@ -230,8 +242,10 @@ Returns a data array where each entry is an object containing the following info
 - company_address
 - notes (will be an empty array)
 
-**Path Params required:** `company_id`(integer).
+**Path Params required:** `company_id`(integer)
+
 **Request Type:** `POST`
+
 **Route** `/api/companies/<company_id>/contacts`
 
 
@@ -297,9 +311,9 @@ http://localhost:8000/api/companies/1/contacts
 
 ### 6. Create a single contact
 Creates a single contact from a supplied JSON object. The following fields should be supplied:
-- **first_name:** [required, string, max: 50 characters],
-- **last_name:** [required, string, max: 50 characters],
-- **email:** [required, must be unique, must be a valid email address, max: 50 characters],
+- **first_name:** [required, string, max: 50 characters]
+- **last_name:** [required, string, max: 50 characters]
+- **email:** [required, must be unique, must be a valid email address, max: 50 characters]
 - **phone:** [required, string, max: 15 characters] (note that the phone number does not have to be unique)
 - **company_id:** [required, integer, must be an existing company id]
 
@@ -316,7 +330,9 @@ Returns a data object with the following information:
 
 
 **Path Params required:** NONE
+
 **Request Type:** `POST`
+
 **Route** `/api/contacts`
 
 
@@ -374,7 +390,9 @@ Will return a data object with the following information about a single, specifi
   - updated_at
 
 **Path Params required:** `contact_id`(integer)
+
 **Request Type:** `GET`
+
 **Route:** `/api/contacts/<contact_id>`
 
 
@@ -412,9 +430,9 @@ http://localhost:8000/api/contacts/1
 
 ## 8. Update a single contact
 Creates a single contact from a supplied JSON object. Any of the following fields may be updated but none are required :
-- **first_name:** [string, max: 50 characters],
-- **last_name:** [string, max: 50 characters],
-- **email:** [must be unique, must be a valid email address, max: 50 characters],
+- **first_name:** [string, max: 50 characters]
+- **last_name:** [string, max: 50 characters]
+- **email:** [must be unique, must be a valid email address, max: 50 characters]
 - **phone:** [string, max: 15 characters] (note that the phone number does not have to be unique)
 - **company_id:** [integer, must be an existing company id]
 
@@ -435,8 +453,10 @@ Returns a data object with the following information:
   - updated_at
 
 
-**Path Params required:** `contact_id`(integer).
+**Path Params required:** `contact_id`(integer)
+
 **Request Type:** `PUT`
+
 **Route:** `/api/contacts/<contact_id>`
 
 
@@ -493,11 +513,15 @@ Will return a data array where each object in will include the information for e
 - company_address
 
 Other metadata will also be included, alongside the data array.
+
 If the 'page' query string isn't included, the first page of results will be returned.
 
 **Path Params required:** `contacts_per_page`(integer)
+
 **Query Params:** `page_number`(integer)
+
 **Request Type:** `GET`
+
 **Route:** `/api/contacts/list/<contacts_per_page>?page=<page_number>`
 
 #### Example Request:
@@ -638,7 +662,9 @@ Returns a data array where each entry is a contact that somehow matches the sear
 - company_address
 
 **Query Params required:** `search_term`(string)
+
 **Request Type:** `GET`
+
 **Route:** `/api/contacts?search=<search_term>`
 
 #### Example Request:
@@ -695,7 +721,9 @@ Returns a data object with the following information:
 
 
 **Path Params required:** `contact_id`(integer)
+
 **Request Type:** `POST`
+
 **Route** `/api/contacts/<contact_id>/note`
 
 
@@ -752,7 +780,9 @@ Returns a data array with the following information for each object in the array
 
 
 **Path Params required:** `contact_id`(integer)
+
 **Request Type:** `POST`
+
 **Route** `/api/contacts/<contact_id>/notes`
 
 
