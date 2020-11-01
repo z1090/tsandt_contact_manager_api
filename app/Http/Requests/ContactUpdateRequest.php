@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class MultipleContactsAtCompanyRequest extends FormRequest
+class ContactUpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,14 +28,11 @@ class MultipleContactsAtCompanyRequest extends FormRequest
     public function rules()
     {
         return [
-            "contacts" => ["required", "array"],
-
-            "contacts.*" => [
-                "first_name" => ["required", "string", "max:50"],
-                "last_name" => ["required", "string", "max:50"],
-                "email" => ["required", "email", "max:50", "unique:contacts,email"],
-                "phone" => ["required", "string", "max:15"]
-            ]
+            "first_name" => ["string", "max:50"],
+            "last_name" => ["string", "max:50"],
+            "email" => ["email", "max:50", "unique:contacts,email"],
+            "phone" => ["string", "max:15"],
+            "company_id" => ["integer", "exists:companies,id"],
         ];
     }
 }
