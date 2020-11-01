@@ -429,7 +429,7 @@ http://localhost:8000/api/contacts/1
 ---
 
 ## 8. Update a single contact
-Creates a single contact from a supplied JSON object. Any of the following fields may be updated but none are required :
+Creates a single contact from a supplied JSON object. Any of the following fields may be updated:
 - **first_name:** [string, max: 50 characters]
 - **last_name:** [string, max: 50 characters]
 - **email:** [must be unique, must be a valid email address, max: 50 characters]
