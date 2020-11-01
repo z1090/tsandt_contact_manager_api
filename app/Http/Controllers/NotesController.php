@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Http\Requests\MultipleNotesRequest;
 use App\Http\Requests\NoteRequest;
 use App\Http\Resources\NoteAddedResource;
 use App\Models\Contact;
@@ -31,6 +33,24 @@ class NotesController extends Controller
         $contact->notes()->save($note);
 
         return new NoteAddedResource($note);
+    }
+
+    /**
+     * Store many newly created resources in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeMany(MultipleNotesRequest $request, Contact $contact)
+    {
+        $data = $request->all()['notes'];
+
+        foreach($data as $key => $value) {
+            $note = new Note($value);
+            $data[$key] = $contact->notes()->save($note);
+        }
+
+        return NoteAddedResource::collection($data);
     }
 
     /**
