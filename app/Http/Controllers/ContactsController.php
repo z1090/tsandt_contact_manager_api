@@ -52,6 +52,8 @@ class ContactsController extends Controller
             'last_name',
             'email',
             'phone',
+            'contacts.created_at as created_at',
+            'contacts.updated_at as updated_at',
             'companies.id as company_id',
             'company_name',
             'company_address'

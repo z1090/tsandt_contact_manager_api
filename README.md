@@ -80,7 +80,17 @@ http://localhost:8000/api/companies
 ---
 
 ### 2. Read a single company
-Will return an object with information about a single, specified company, including the company id, name and address.
+Will return an object with information about a single, specified company, including:
+- company_id
+- company_name
+- company_address
+- created_at
+- updated_at
+- contacts
+  - contact_id
+  - first_name
+  - last_name
+
 
 **Path Params required:** `company_id`(integer)
 
@@ -91,15 +101,39 @@ Will return an object with information about a single, specified company, includ
 
 #### Example Request:
 ```
-http://localhost:8000/api/companies/1
+http://localhost:8000/api/companies/3
 ```
 #### Example Response:
 ```JSON
 {
     "data": {
-        "id": 1,
-        "company_name": "Mita",
-        "company_address": "87 Kipling Center"
+        "id": 3,
+        "company_name": "Tazzy",
+        "company_address": "86269 Garrison Lane",
+        "created_at": "2020-11-01T14:14:41.000000Z",
+        "updated_at": "2020-11-01T14:14:41.000000Z",
+        "contacts": [
+            {
+                "contact_id": 2,
+                "first_name": "Bertie",
+                "last_name": "Evered"
+            },
+            {
+                "contact_id": 12,
+                "first_name": "Isacc",
+                "last_name": "Ebunoluwa"
+            },
+            {
+                "contact_id": 15,
+                "first_name": "Rita",
+                "last_name": "Tutchings"
+            },
+            {
+                "contact_id": 17,
+                "first_name": "Mervyn",
+                "last_name": "Myerscough"
+            },
+        ]
     }
 }
 ```
@@ -115,9 +149,12 @@ Will return an array of all the contacts associated with a specified company. Th
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 
 **Path Params required:** `company_id`(integer)
 
@@ -139,6 +176,8 @@ http://localhost:8000/api/companies/1/contacts
             "last_name": "Petruskevich",
             "email": "cpetruskevich2@mita.com",
             "phone": "01610030782",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company": {
                 "company_id": 1,
                 "company_name": "Mita",
@@ -151,6 +190,50 @@ http://localhost:8000/api/companies/1/contacts
             "last_name": "Lyndon",
             "email": "klyndon3@mita.com",
             "phone": "01610779901",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
+            "company": {
+                "company_id": 1,
+                "company_name": "Mita",
+                "company_address": "87 Kipling Center"
+            }
+        },
+        {
+            "contact_id": 13,
+            "first_name": "Kiele",
+            "last_name": "Brownbill",
+            "email": "kbrownbillc@mita.edu",
+            "phone": "01610369032",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
+            "company": {
+                "company_id": 1,
+                "company_name": "Mita",
+                "company_address": "87 Kipling Center"
+            }
+        },
+        {
+            "contact_id": 16,
+            "first_name": "Polly",
+            "last_name": "Charville",
+            "email": "pcharvillef@mita.com",
+            "phone": "01610791664",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
+            "company": {
+                "company_id": 1,
+                "company_name": "Mita",
+                "company_address": "87 Kipling Center"
+            }
+        },
+        {
+            "contact_id": 18,
+            "first_name": "Analise",
+            "last_name": "Tilbury",
+            "email": "atilburyh@mita.com",
+            "phone": "01610276436",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company": {
                 "company_id": 1,
                 "company_name": "Mita",
@@ -175,9 +258,12 @@ Returns a data object with the following information:
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 - notes (will be an empty array)
 
 
@@ -212,6 +298,8 @@ http://localhost:8000/api/companies/1/contact
         "last_name": "Smith",
         "email": "john.smith@gmail.com",
         "phone": "01234567890",
+        "created_at": "2020-11-01T15:34:56.000000Z",
+        "updated_at": "2020-11-01T15:34:56.000000Z",
         "company": {
             "company_id": 1,
             "company_name": "Mita",
@@ -237,9 +325,12 @@ Returns a data array where each entry is an object containing the following info
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 - notes (will be an empty array)
 
 **Path Params required:** `company_id`(integer)
@@ -282,6 +373,8 @@ http://localhost:8000/api/companies/1/contacts
             "last_name": "Doe",
             "email": "jon.doe@gmail.com",
             "phone": "01234567890",
+            "created_at": "2020-11-01T15:35:11.000000Z",
+            "updated_at": "2020-11-01T15:35:11.000000Z",
             "company": {
                 "company_id": 1,
                 "company_name": "Mita",
@@ -295,6 +388,8 @@ http://localhost:8000/api/companies/1/contacts
             "last_name": "Doe",
             "email": "jane.doe@hotmail.com",
             "phone": "01234567890",
+            "created_at": "2020-11-01T15:35:11.000000Z",
+            "updated_at": "2020-11-01T15:35:11.000000Z",
             "company": {
                 "company_id": 1,
                 "company_name": "Mita",
@@ -323,9 +418,12 @@ Returns a data object with the following information:
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 - notes (will be an empty array)
 
 
@@ -361,6 +459,8 @@ http://localhost:8000/api/contacts
         "last_name": "Jones",
         "email": "sally.jones@gmail.com",
         "phone": "01234567890",
+        "created_at": "2020-11-01T15:35:21.000000Z",
+        "updated_at": "2020-11-01T15:35:21.000000Z",
         "company": {
             "company_id": 3,
             "company_name": "Tazzy",
@@ -379,9 +479,12 @@ Will return a data object with the following information about a single, specifi
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 - notes (array)
   - id
   - note_text
@@ -409,6 +512,8 @@ http://localhost:8000/api/contacts/1
         "last_name": "Issatt",
         "email": "nissatt0@browsebug.co.uk",
         "phone": "01225340164",
+        "created_at": "2020-11-01T14:14:41.000000Z",
+        "updated_at": "2020-11-01T14:14:41.000000Z",
         "company": {
             "company_id": 2,
             "company_name": "Browsebug",
@@ -442,9 +547,12 @@ Returns a data object with the following information:
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 - notes (array)
   - id
   - note_text
@@ -482,6 +590,8 @@ http://localhost:8000/api/contacts/1
         "last_name": "Wildsmith",
         "email": "nissatt0@browsebug.co.uk",
         "phone": "01225340164",
+        "created_at": "2020-11-01T14:14:41.000000Z",
+        "updated_at": "2020-11-01T15:36:02.000000Z",
         "company": {
             "company_id": 2,
             "company_name": "Browsebug",
@@ -502,17 +612,20 @@ http://localhost:8000/api/contacts/1
 ---
 
 ## 9. Read Paginated Contacts
-Will return a data array where each object in will include the information for each contact:
+Will return a data array where each object in the array will include the following information for each contact:
 - contact_id
 - first_name
 - last_name
 - email
 - phone
-- company_id
-- company_name
-- company_address
+- created_at
+- updated_at
+- company
+  - company_id
+  - company_name
+  - company_address
 
-Other metadata will also be included, alongside the data array.
+A 'links' array for pagination navigation and a 'meta' array for other metadata will also be included, alongside the 'data' array.
 
 If the 'page' query string isn't included, the first page of results will be returned.
 
@@ -538,6 +651,8 @@ http://localhost:8000/api/contacts/list/3?page=2
             "last_name": "Lyndon",
             "email": "klyndon3@mita.com",
             "phone": "01610779901",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company": {
                 "company_id": 1,
                 "company_name": "Mita",
@@ -550,6 +665,8 @@ http://localhost:8000/api/contacts/list/3?page=2
             "last_name": "Element",
             "email": "delement4@blogspan.org",
             "phone": "01249159682",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company": {
                 "company_id": 4,
                 "company_name": "Blogspan",
@@ -562,6 +679,8 @@ http://localhost:8000/api/contacts/list/3?page=2
             "last_name": "Warrior",
             "email": "rwarrior5@browsebug.co.uk",
             "phone": "01225977981",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company": {
                 "company_id": 2,
                 "company_name": "Browsebug",
@@ -657,6 +776,8 @@ Returns a data array where each entry is a contact that somehow matches the sear
 - last_name
 - email
 - phone
+- created_at
+- updated_at
 - company_id
 - company_name
 - company_address
@@ -681,6 +802,8 @@ http://localhost:8000/api/contacts?search=Kim
             "last_name": "Lyndon",
             "email": "klyndon3@mita.com",
             "phone": "01610779901",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company_id": 1,
             "company_name": "Mita",
             "company_address": "87 Kipling Center"
@@ -691,6 +814,8 @@ http://localhost:8000/api/contacts?search=Kim
             "last_name": "Somerbell",
             "email": "ksomerbell7@browsebug.co.uk",
             "phone": "01225135649",
+            "created_at": "2020-11-01T14:14:41.000000Z",
+            "updated_at": "2020-11-01T14:14:41.000000Z",
             "company_id": 2,
             "company_name": "Browsebug",
             "company_address": "69 Forster Place"
@@ -712,12 +837,13 @@ Returns a data object with the following information:
 - created_at
 - updated_at
 - contact_id
-- first_name
-- last_name
-- email
-- phone
-- company_id
-- company_name
+- contact
+  - first_name
+  - last_name
+  - email
+  - phone
+  - company_id
+  - company_name
 
 
 **Path Params required:** `contact_id`(integer)
@@ -770,13 +896,14 @@ Returns a data array with the following information for each object in the array
 - note_text
 - created_at
 - updated_at
-- contact_id
-- first_name
-- last_name
-- email
-- phone
-- company_id
-- company_name
+- contact
+  - contact_id
+  - first_name
+  - last_name
+  - email
+  - phone
+  - company_id
+  - company_name
 
 
 **Path Params required:** `contact_id`(integer)
