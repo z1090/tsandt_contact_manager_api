@@ -20,6 +20,8 @@ class ContactResource extends JsonResource
             "last_name" => $this->last_name,
             "email" => $this->email,
             "phone" => $this->phone,
+            "created_at" => $this->created_at,
+            "updated_at" => $this->updated_at,
             "company" => [
                 "company_id" => $this->company->id,
                 "company_name" => $this->company->company_name,

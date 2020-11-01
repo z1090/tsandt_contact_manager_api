@@ -17,7 +17,10 @@ class CompanyResource extends JsonResource
         return [
             "id" => $this->id,
             "company_name" => $this->company_name,
-            "company_address" => $this->company_address
+            "company_address" => $this->company_address,
+            "created_at" => $this->created_at,
+            "updated_at" => $this->updated_at,
+            "contacts" => ContactsSimpleListResource::collection($this->contacts)
         ];
     }
 }

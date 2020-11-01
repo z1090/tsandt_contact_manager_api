@@ -33,7 +33,7 @@ Route::prefix('companies')->group(function () {
 
 // Contacts at a company routes
 Route::prefix('companies/{company}')->middleware('auth:sanctum')->group(function () {
-    Route::get('', [ContactsAtCompanyController::class, 'index']);
+    Route::get('contacts', [ContactsAtCompanyController::class, 'index']);
     Route::post('contact', [ContactsAtCompanyController::class, 'store']);
     Route::post('contacts', [ContactsAtCompanyController::class, 'storeMany']);
 });
