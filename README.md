@@ -780,9 +780,10 @@ Returns a data array where each entry is a contact that somehow matches the sear
 - phone
 - created_at
 - updated_at
-- company_id
-- company_name
-- company_address
+- company
+  - company_id
+  - company_name
+  - company_address
 
 **Query Params required:** `search_term`(string)
 
@@ -804,11 +805,13 @@ http://localhost:8000/api/contacts?search=Kim
             "last_name": "Lyndon",
             "email": "klyndon3@mita.com",
             "phone": "01610779901",
-            "created_at": "2020-11-01T14:14:41.000000Z",
-            "updated_at": "2020-11-01T14:14:41.000000Z",
-            "company_id": 1,
-            "company_name": "Mita",
-            "company_address": "87 Kipling Center"
+            "created_at": "2020-11-01T16:31:42.000000Z",
+            "updated_at": "2020-11-01T16:31:42.000000Z",
+            "company": {
+                "company_id": 1,
+                "company_name": "Mita",
+                "company_address": "87 Kipling Center"
+            }
         },
         {
             "contact_id": 8,
@@ -816,11 +819,13 @@ http://localhost:8000/api/contacts?search=Kim
             "last_name": "Somerbell",
             "email": "ksomerbell7@browsebug.co.uk",
             "phone": "01225135649",
-            "created_at": "2020-11-01T14:14:41.000000Z",
-            "updated_at": "2020-11-01T14:14:41.000000Z",
-            "company_id": 2,
-            "company_name": "Browsebug",
-            "company_address": "69 Forster Place"
+            "created_at": "2020-11-01T16:31:42.000000Z",
+            "updated_at": "2020-11-01T16:31:42.000000Z",
+            "company": {
+                "company_id": 2,
+                "company_name": "Browsebug",
+                "company_address": "69 Forster Place"
+            }
         }
     ]
 }
